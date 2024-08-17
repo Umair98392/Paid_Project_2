@@ -1,0 +1,50 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>          Home Locality          </h1>
+  <p>Welcome to Home Locality, a website developed by <em>Mozilla Developer Network</em>! to specifies the neighbourhood and vicinity of the houses. </p>
+  <p>This app shows the details of a locality of the house.</p>
+  <h2>Records </h2>
+  <p>The locality Descriptions of the houses :</p>
+  <table border="3" width="200">
+  <tr>
+  <td>Id</td>
+  <td>MSSubClass</td>
+  <td>MSZoning</td>
+  <td>LotFrontage</td>
+  <td>LotArea</td>
+  <td>Street</td>
+  <td>Alley</td>
+  <td>LotShape</td>
+  <td>LandContour</td>
+  <td>Utilities</td>
+  <td>LotConfig</td>
+  <td>LandSlope</td>
+  <td>Neighborhood</td>
+  </tr>
+  {% for record in records %}
+  <tr>
+  <td>{{ record.Id }}</td>
+  <td>{{ record.MSSubClass }}</td>
+  <td>{{ record.MSZoning }}</td>
+  <td>{{ record.LotFrontage }}</td>
+  <td>{{ record.LotArea }}</td>
+  <td>{{ record.Street }}</td>
+  <td>{{ record.Alley }}</td>
+  <td>{{ record.LotShape }}</td>
+  <td>{{ record.LandContour }}</td>
+  <td>{{ record.Utilities }}</td>
+  <td>{{ record.LotConfig }}</td>
+  <td>{{ record.LandSlope }}</td>
+  <td>{{ record.Neighborhood }}</td>
+  </tr>
+  {% endfor %}
+  </table>
+  <!-- <ul>
+    <li><strong>Books:</strong> {{ num_books }}</li>
+    <li><strong>Copies:</strong> {{ num_instances }}</li>
+    <li><strong>Copies available:</strong> {{ num_instances_available }}</li>
+    <li><strong>Authors:</strong> {{ num_authors }}</li>
+  </ul> -->
+{% endblock %}
+
